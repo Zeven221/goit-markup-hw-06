@@ -55,6 +55,8 @@ p {
   overflow: hidden;
 }
 .container {
+    margin-left: auto;
+    margin-right: auto;
     max-width: 320px;
 }
 .social-link{
@@ -67,6 +69,20 @@ p {
     column-gap: 72px;
     flex-direction: row; 
     row-gap: 72px;
+}
+.mobile-menu{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #FFFFFF;
+    padding: 72px 24px 40px 16px;
+    max-width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* #endregion basics */
 
@@ -163,23 +179,7 @@ p {
 .contans-us-menu-div{
     margin-bottom: 48px;
 }
-.mobile-menu{
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: #FFFFFF;
-    padding: 72px 24px 40px 16px;
-    max-width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.mobile-menu-is-open{
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all; 
-}
+
 .menu-social-link-list{
     display: flex;
     column-gap: 40px;
@@ -378,7 +378,34 @@ address .contacts-ul{
     display: flex;
     justify-content: center;
     align-items: center;
-}  
+}
+@media (min-resolution: 192dpi) {
+    .order-service{
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url('./../images/background-image/mobile-hero@x2.png');
+    }
+}
+@media screen and (min-width: 767px) {
+    .order-service{
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url('./../images/background-image/tablet-hero.png');
+    }
+    
+}
+          
+@media screen and (min-width: 1158px) {
+    .order-service{
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url('./../images/background-image/pc-hero.png');
+    }   
+}
+@media screen and (min-width: 768px) and (resolution: 192dpi) {
+    .order-service{
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url('./../images/background-image/tablet-hero@x2.png');
+    }
+}
+@media screen and (min-width: 1158px) and (resolution: 192dpi) {
+    .order-service{
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url('./../images/background-image/pc-hero@2x.png');
+    }
+}
 .order-service h1 {
     display: block;
     color: #FFFFFF;
@@ -1069,7 +1096,7 @@ footer p{
     letter-spacing: 0.04em;
     line-height: 1.17;
 }
-#user-comment::placeholder{
+.user-comment::placeholder{
     font-weight: 400;
     font-size: 12px;
     color: rgba(46, 47, 66, 0.4);
