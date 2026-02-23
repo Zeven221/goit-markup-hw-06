@@ -138,6 +138,12 @@ p {
 .mobile-menu-address{
     display: flex;
 }
+.mobile-menu-address .contact-list-items{
+    font-style: normal;
+}
+.info-about-team p{
+    margin-bottom: 8px;
+}
 .header-menu {
     padding-top: 16px;
     padding-bottom: 16px;
@@ -184,9 +190,8 @@ p {
 }
 
 .mobile-menu-links{
-    margin-top: 72px;
     display: flex;
-    margin-bottom: 168px;
+    margin-bottom: auto;
 }
 .contact-list-link{
     color: #434455;
@@ -253,7 +258,9 @@ p {
     margin-bottom: 8px;
 }
 @media screen and (min-width: 768px){
-    
+    .benefits-items h3{
+        text-align: left;
+    }
     .header-content-wrapper{
         display: flex;
         align-items: center;
@@ -274,7 +281,7 @@ p {
     padding-bottom: 96px;
     }
     .container{
-        max-width: 768px;
+        max-width: 584px;
     }
     .navigation,.contacts-ul,address{
     display: flex;
@@ -298,12 +305,13 @@ p {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
+        padding-bottom: 0;
+        padding-top: 0;
     }
     .main-navigation{
         margin: 0;
         display: flex;
         align-items: center;
-        margin-right: 122px;
         margin-left: 16px;
         justify-content: flex-start;    
     }
@@ -352,6 +360,10 @@ p {
         align-items: center;
         flex-direction: row;
     }
+    .portfolio{
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
     .portfolio-ul{
         flex-wrap: wrap;
     }
@@ -388,6 +400,9 @@ p {
     }
     .contacts-link:hover,.portfolio-link:hover,.studio-link:hover,.email:hover, .phone:hover,.contacts-link:focus,.portfolio-link:focus,.studio-link:focus,.email:focus, .phone:focus {
         color: #404BBF;
+    }
+    .phone, .email{
+        font-size: 16px;
     }
 
 }
@@ -522,6 +537,7 @@ p {
     margin-top: 0;
     font-size: 16px;
     width: 264px;
+    font-weight: 400;
     
     
     
@@ -749,7 +765,8 @@ p {
     height: 300px;
     }
     .team{
-        padding: 96px 108px;
+        padding-top: 96px;
+        padding-bottom: 96px;
     }
     .team .team-ul-list{
         display: flex;
@@ -801,23 +818,19 @@ p {
     flex-direction: column;
     gap: 48px 0;
 }
-.portfolio-container{
-    padding-top: 96px;
-    padding-bottom: 96px;
-}
 .portfolio-info{
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+   
     border-bottom: 1px solid #E7E9FC;
     border-left: 1px solid #E7E9FC;
     border-right: 1px solid #E7E9FC;
     padding: 32px 16px;
 }
-
+.portfolio-items{
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
 
 @media screen and (min-width: 768px){
-    .portfolio-container{
-    padding: 96px 108px;
-}
+
 
     .portfolio-ul{
         display: flex;
@@ -837,12 +850,15 @@ p {
 
 }
 @media screen and (min-width: 1158px){
+    .portfolio-items{
+        box-shadow: none;
+    }
+    .portfolio-items:hover{
+        box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    }
     .navigation{
         margin-right: 332px;
     }
-    .portfolio-container{
-    padding: 120px 156px;
-}
     .portfolio-ul{
         row-gap: 0;
         column-gap: 24px;
@@ -883,7 +899,7 @@ p {
     display: flex;
     justify-content: center;
 }
-.footer-logo-desc{
+.logo-link-cont{
     margin-bottom: 72px;
 }
 .logo-footer{
@@ -902,7 +918,6 @@ p {
     column-gap: 16px;
     justify-content: center;
     margin-top: 16px;
-    margin-bottom: 72px;
     display: flex;
     flex-direction: row-reverse;
 
@@ -1006,7 +1021,8 @@ footer p{
     }
     .footer-desc{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         row-gap: 72px;
 
     }
@@ -1038,7 +1054,6 @@ footer p{
     flex-direction: row;
     column-gap: 24px;
     align-items: flex-end;
-    margin: 0 auto;
     }
     .subscribe-button-div{
         margin-top: 20px;
@@ -1046,6 +1061,18 @@ footer p{
     }
 }
 @media screen and (min-width: 1158px) {
+    .subscribe-div{
+        margin-right: 24px;
+    }
+    .logo-subtitle{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    width: 265px;
+    }
+    .logo-link-cont{
+        margin-bottom: 0;
+    }
     .container{
     padding-left: 15px;
     padding-right: 15px;
@@ -1058,13 +1085,13 @@ footer p{
         flex-direction: row;
         justify-content: center;
         align-items: flex-start;
-        padding-left: 156px;
-        padding-right: 156px;
+
     }
     .subscribe-form{
         column-gap: 0;
     }
     .social-link-div{
+        margin-bottom: 72px;
         margin-left: 120px;
         margin-right: 80px;
     }
@@ -1101,7 +1128,11 @@ footer p{
 .overlay-portfolio{
     padding: 40px 32px 164px 32px;
 }
-
+.footer-content-div{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
 
 }
 .custom-checkbox {
@@ -1310,9 +1341,10 @@ footer p{
   
 }
 @media screen and (min-width: 768px) {
-    .logo-link-cont{
-        margin-right:  auto;
+    .footer-content-div{
+        width: 584px;
         margin-left: auto;
+        margin-right: auto;
     }
     .modal-window{
         padding: 24px;
